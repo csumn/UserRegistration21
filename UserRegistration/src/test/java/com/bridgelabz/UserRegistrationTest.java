@@ -16,7 +16,7 @@ public class UserRegistrationTest {
 	@Test
 	public void testUserFirstName_whenValid_ShouldReturnSuccess(){
 		try {
-			boolean result = userRegistration.validateFirstName("Suman");
+			boolean result = userRegistration.validateFirstName.validate("Suman");
 			Assert.assertTrue(result);
 		}catch (InvalidUserException e){
 			System.out.println(e);
@@ -26,7 +26,7 @@ public class UserRegistrationTest {
 	@Test
 	public void testUserFirstName_whenInValid_ShouldReturnException(){
 		try {
-			boolean result = userRegistration.validateFirstName("suman");
+			boolean result = userRegistration.validateFirstName.validate("suman");
 			Assert.assertTrue(result);
 		}catch (InvalidUserException e){
 			System.out.println(e);
@@ -36,7 +36,7 @@ public class UserRegistrationTest {
 	@Test
 	public void testUserFirstName_whenNull_ShouldReturnException(){
 		try {
-			boolean result = userRegistration.validateFirstName(null);
+			boolean result = userRegistration.validateFirstName.validate(null);
 			Assert.assertTrue(result);
 		}catch (InvalidUserException e){
 			System.out.println(e);
@@ -46,7 +46,7 @@ public class UserRegistrationTest {
 	@Test
 	public void testUserLastName_whenValid_ShouldReturnSucess(){
 		try {
-			boolean result = userRegistration.validateLastName("Chandragiri");
+			boolean result = userRegistration.validateLastName.validate("Chandragiri");
 			Assert.assertTrue(result);
 		}catch (InvalidUserException e){
 			System.out.println(e);
@@ -56,7 +56,7 @@ public class UserRegistrationTest {
 	@Test
 	public void testUserLastName_whenInValid_ShouldReturnException(){
 		try {
-			boolean result = userRegistration.validateLastName("chandragiri");
+			boolean result = userRegistration.validateLastName.validate("chandragiri");
 			Assert.assertTrue(result);
 		}catch (InvalidUserException e){
 			System.out.println(e);
@@ -66,7 +66,7 @@ public class UserRegistrationTest {
 	@Test
 	public void testUserLastName_whenNull_ShouldReturnException(){
 		try {
-			boolean result = userRegistration.validateLastName(null);
+			boolean result = userRegistration.validateLastName.validate(null);
 			Assert.assertTrue(result);
 		}catch (InvalidUserException e){
 			System.out.println(e);
@@ -76,7 +76,7 @@ public class UserRegistrationTest {
 	@Test
 	public void testUserEmailID_whenValid_ShouldReturnSucess(){
 		try {
-			boolean result = userRegistration.validateEmailID("csumn132@gmail.com");
+			boolean result = userRegistration.validateEmailID.validate("csumn132@gmail.com");
 			Assert.assertTrue(result);
 		}catch (InvalidUserException e){
 			System.out.println(e);
@@ -86,7 +86,7 @@ public class UserRegistrationTest {
 	@Test
 	public void testUserEmailID_whenInValid_ShouldReturnException(){
 		try {
-			boolean result = userRegistration.validateEmailID("13@gmail");
+			boolean result = userRegistration.validateEmailID.validate("13@gmail");
 			Assert.assertTrue(result);
 		}catch (InvalidUserException e){
 			System.out.println(e);
@@ -96,7 +96,7 @@ public class UserRegistrationTest {
 	@Test
 	public void testUserEmailID_whenNull_ShouldReturnException(){
 		try {
-			boolean result = userRegistration.validateEmailID(null);
+			boolean result = userRegistration.validateEmailID.validate(null);
 			Assert.assertTrue(result);
 		}catch (InvalidUserException e){
 			System.out.println(e);
@@ -106,7 +106,7 @@ public class UserRegistrationTest {
 	@Test
 	public void testUserMobileNumber_whenValid_ShouldReturnSucess(){
 		try {
-			boolean result = userRegistration.validateMobileNumber("91 9999999999");
+			boolean result = userRegistration.validateMobileNumber.validate("91 9999999999");
 			Assert.assertTrue(result);
 		}catch (InvalidUserException e){
 			System.out.println(e);
@@ -116,7 +116,7 @@ public class UserRegistrationTest {
 	@Test
 	public void testUserMobileNumber_whenInValid_ShouldReturnException(){
 		try {
-			boolean result = userRegistration.validateMobileNumber("181881");
+			boolean result = userRegistration.validateMobileNumber.validate("181881");
 			Assert.assertTrue(result);
 		}catch (InvalidUserException e){
 			System.out.println(e);
@@ -126,7 +126,7 @@ public class UserRegistrationTest {
 	@Test
 	public void testUserMobileNumber_whenNull_ShouldReturnException(){
 		try {
-			boolean result = userRegistration.validateEmailID(null);
+			boolean result = userRegistration.validateMobileNumber.validate(null);
 			Assert.assertTrue(result);
 		}catch (InvalidUserException e){
 			System.out.println(e);
@@ -136,7 +136,7 @@ public class UserRegistrationTest {
 	@Test
 	public void testUserPassword_whenValid_ShouldReturnSucess(){
 		try {
-			boolean result = userRegistration.validatePassword("Healup13@");
+			boolean result = userRegistration.validatePassword.validate("Healup13@");
 			Assert.assertTrue(result);
 		}catch (InvalidUserException e){
 			System.out.println(e);
@@ -146,7 +146,7 @@ public class UserRegistrationTest {
 	@Test
 	public void testUserPassword_whenInValid_ShouldReturnException(){
 		try {
-			boolean result = userRegistration.validatePassword("transition");
+			boolean result = userRegistration.validatePassword.validate("transition");
 			Assert.assertTrue(result);
 		}catch (InvalidUserException e){
 			System.out.println(e);
@@ -156,7 +156,7 @@ public class UserRegistrationTest {
 	@Test
 	public void testUserPassword_whenNull_ShouldReturnException(){
 		try {
-			boolean result = userRegistration.validatePassword(null);
+			boolean result = userRegistration.validatePassword.validate(null);
 			Assert.assertTrue(result);
 		}catch (InvalidUserException e){
 			System.out.println(e);
