@@ -1,6 +1,6 @@
 package com.bridgelabz;
 
-public class UserRegistration {
+public class UserRegistration{
 
 	private static final String FIRST_NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";;
 	private static final String LAST_NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";
@@ -8,71 +8,50 @@ public class UserRegistration {
 	private static final String MOBILE_NUMBER_PATTERN =  "^([0-9]{2}\\s)?[6789]{1}[0-9]{9}";
 	private static final String PASSWORD_PATTERN = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,}$";
 
-	public boolean validateFirstName(String firstName) throws InvalidUserException {
-		try
-		{
-			if (firstName.matches(FIRST_NAME_PATTERN)) {
-				return true;
-			} else {
-				throw new InvalidUserException(InvalidUserException.ExceptionType.ENTERED_INVALID, "Please provide Specific format");
-			}
-		}catch(NullPointerException e){
-			throw new InvalidUserException(InvalidUserException.ExceptionType.ENTERED_NULL, "Please don't pass null value");
+	UserRegistrationInterface validateFirstName = firstName->{
+		boolean result = firstName.matches(FIRST_NAME_PATTERN);
+		if (result){
+			return result;
+		} else{
+			throw new InvalidUserException(InvalidUserException.ExceptionType.ENTERED_INVALID, "Please provide Specific format");
 		}
-	}
+	};
 
-	public boolean validateLastName(String lastName) throws InvalidUserException {
-		try
-		{
-			if (lastName.matches(LAST_NAME_PATTERN)) {
-				return true;
-			} else {
-				throw new InvalidUserException(InvalidUserException.ExceptionType.ENTERED_INVALID, "Please provide Specific format");
-			}
-		}catch(NullPointerException e){
-			throw new InvalidUserException(InvalidUserException.ExceptionType.ENTERED_NULL, "Please don't pass null value");
+	UserRegistrationInterface validateLastName = lastName->{
+		boolean result = lastName.matches(LAST_NAME_PATTERN);
+		if (result){
+			return result;
+		} else{
+			throw new InvalidUserException(InvalidUserException.ExceptionType.ENTERED_INVALID, "Please provide Specific format");
 		}
-	}
+	};
 
-	public boolean validateEmailID(String emailId) throws InvalidUserException {
-		try
-		{
-			if (emailId.matches(EMAIL_ID_PATTERN)) {
-				return true;
-			} else {
-				throw new InvalidUserException(InvalidUserException.ExceptionType.ENTERED_INVALID, "Please provide Specific format");
-			}
-		}catch(NullPointerException e){
-			throw new InvalidUserException(InvalidUserException.ExceptionType.ENTERED_NULL, "Please don't pass null value");
+	UserRegistrationInterface validateEmailID = emailId->{
+		boolean result = emailId.matches(EMAIL_ID_PATTERN);
+		if (result){
+			return result;
+		} else{
+			throw new InvalidUserException(InvalidUserException.ExceptionType.ENTERED_INVALID, "Please provide Specific format");
 		}
-	}
+	};
 
-
-	public boolean validateMobileNumber(String mobileNumber) throws InvalidUserException {
-		try
-		{
-			if (mobileNumber.matches(MOBILE_NUMBER_PATTERN)) {
-				return true;
-			} else {
-				throw new InvalidUserException(InvalidUserException.ExceptionType.ENTERED_INVALID, "Please provide Specific format");
-			}
-		}catch(NullPointerException e){
-			throw new InvalidUserException(InvalidUserException.ExceptionType.ENTERED_NULL, "Please don't pass null value");
+	UserRegistrationInterface validateMobileNumber = mobileNumber->{
+		boolean result = mobileNumber.matches(MOBILE_NUMBER_PATTERN);
+		if (result){
+			return result;
+		} else{
+			throw new InvalidUserException(InvalidUserException.ExceptionType.ENTERED_INVALID, "Please provide Specific format");
 		}
-	}
+	};
 
-	public boolean validatePassword(String password) throws InvalidUserException {
-		try
-		{
-			if (password.matches(PASSWORD_PATTERN)) {
-				return true;
-			} else {
-				throw new InvalidUserException(InvalidUserException.ExceptionType.ENTERED_INVALID, "Please provide Specific format");
-			}
-		}catch(NullPointerException e){
-			throw new InvalidUserException(InvalidUserException.ExceptionType.ENTERED_NULL, "Please don't pass null value");
+	UserRegistrationInterface validatePassword = password->{
+		boolean result = password.matches(PASSWORD_PATTERN);
+		if (result){
+			return result;
+		} else{
+			throw new InvalidUserException(InvalidUserException.ExceptionType.ENTERED_INVALID, "Please provide Specific format");
 		}
-	}
+	};
 }
 
 
